@@ -3,9 +3,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<!-- <groupId>jp.que.ti.y_s_util</groupId> -->
-	<artifactId>ysu_io</artifactId>
+	<artifactId>ysu_any</artifactId>
 	<packaging>jar</packaging>
-	<name>ysu_io -- utilitys of io</name>
+	<name>ysu_any -- utilitys of Various functions.</name>
 	<!-- <version>0.0.1-SNAPSHOT</version> -->
 
 	<parent>
