@@ -161,6 +161,13 @@
 
 			<!-- http://search.maven.org/#browse%7C108391111 -->
 			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<scope>compile</scope>
+				<version>1.6.2</version>
+			</dependency>
+
+			<dependency>
 				<groupId>ch.qos.logback</groupId>
 				<artifactId>logback-classic</artifactId>
 				<version>[0.9.9,0.9.999]</version>
@@ -172,6 +179,7 @@
 	<!-- <distributionManagement> <site> <id>website</id> <url>scp://webhost.company.com/www/website</url> 
 		</site> </distributionManagement> -->
 	<modules>
+		<module>../ysu_any</module>
 		<module>../ysu_io</module>
 	</modules>
 
