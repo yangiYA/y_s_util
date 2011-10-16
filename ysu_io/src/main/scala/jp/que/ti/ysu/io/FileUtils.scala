@@ -1,13 +1,14 @@
 package jp.que.ti.ysu.io
 import java.io.File
 import scala.annotation.tailrec
-import org.slf4j.LoggerFactory
+import java.util.logging.Logger
+//import org.slf4j.LoggerFactory
 
 /**
  * ファイルに関するユーティリティクラスです
  */
 object FileUtils {
-	private val logger = LoggerFactory.getLogger(this.getClass())
+	private val log = Logger.getLogger(this.getClass().getName())
 
 	/**
 	 * 引数で渡されたディレクトリ以下のファイルの一覧を返却します

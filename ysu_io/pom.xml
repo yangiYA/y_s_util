@@ -16,6 +16,7 @@
 	</parent>
 
 	<build>
+		<finalName>ysu_io.jar</finalName>
 		<sourceDirectory>src/main/scala</sourceDirectory>
 		<testSourceDirectory>src/test/scala</testSourceDirectory>
 
@@ -93,11 +94,6 @@
 		<dependency>
 			<groupId>org.scala-lang</groupId>
 			<artifactId>scala-library</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-			<scope>compile</scope>
 		</dependency>
 	</dependencies>
 </project>
