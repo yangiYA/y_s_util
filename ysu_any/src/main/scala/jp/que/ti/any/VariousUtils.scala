@@ -1,9 +1,12 @@
 package jp.que.ti.any
-import org.slf4j.Logger
-import org.slf4j.LoggerFactory
+import java.io.InputStream
+import java.lang.ClassLoader
+import java.lang.System
+import java.util.logging.LogManager
+import java.util.logging.Logger
 
 object VariousUtils {
-	private val logger: Logger = LoggerFactory.getLogger(getClass());
+	private val log: JLog = new JLog(Logger.getLogger(getClass().getName()));
 
 	/**
 	 * ブロックを抜けると自動的に、引数 resource をクローズする関数。
@@ -25,8 +28,7 @@ object VariousUtils {
 			block(resource) //処理ブロック
 		} catch {
 			case e: Throwable => {
-				if (logger.isDebugEnabled()) logger.debug(
-					"リソース=" + resource + " を使用した処理で例外が発生しました", e)
+				log.debug("リソース=" + resource + " を使用した処理で例外が発生しました", e)
 				throw e
 			}
 		} finally {
@@ -34,10 +36,35 @@ object VariousUtils {
 				if (resource != null) resource.close()
 			} catch {
 				case e: Throwable => {
-					if (logger.isInfoEnabled()) logger.info(
-						"リソース=" + resource + " のclose実行時に例外が発生しました", e)
+					log.warn("リソース=" + resource + " のclose実行時に例外が発生しました", e)
 				}
 			}
 		}
+	}
+
+	/** ログ設定を初期化します。引数で指定したプロパティーファイルをクラスパスから検索して初期化します */
+	def initLoggerConfig(propFileName: String): Unit = {
+		val prpIs = ClassLoader.getSystemClassLoader().getResourceAsStream(propFileName)
+		if (prpIs == null) return
+		try {
+			initLoggerConfig(prpIs);
+		} catch {
+			case e: Throwable =>
+				println("Logger設定ファイル " + propFileName + " が読み込めませんでした")
+				e.printStackTrace()
+		}
+	}
+
+	/** ログ設定を初期化します */
+	def initLoggerConfig(propInputStream: InputStream): Unit = {
+		LogManager.getLogManager().readConfiguration(propInputStream);
+	}
+
+	/** 改行文字を返却します */
+	def lineSeparator: String = _lineSeparator
+	private var _lineSeparator: String = "\n"
+	try {
+		val n = System.getProperty("line.separator")
+		_lineSeparator = if (n == null) { "\n" } else { n }
 	}
 }
