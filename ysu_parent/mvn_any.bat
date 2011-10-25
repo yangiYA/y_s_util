@@ -6,6 +6,7 @@ rem set PATH=%PATH%;%MAVEN_HOME%\bin
 rem cd ..\ysu_io
  
 
-mvn deploy
+rem mvn clean package
+mvn clean install deploy
 rem mvn install
 rem mvn package
