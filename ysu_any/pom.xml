@@ -5,7 +5,7 @@
 	<!-- <groupId>jp.que.ti.y_s_util</groupId> -->
 	<artifactId>ysu_any</artifactId>
 	<packaging>jar</packaging>
-	<name>ysu_any -- utilitys of Various functions.</name>
+	<name>ysu_any -- utilities of Various functions.</name>
 	<!-- <version>0.0.1-SNAPSHOT</version> -->
 
 	<parent>
@@ -40,7 +40,7 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<configuration>
 					<excludes>
-						<include>**/MatrixTest.*</include>
+						<exclude>**/MatrixTest.*</exclude>
 					</excludes>
 				</configuration>
 			</plugin>
