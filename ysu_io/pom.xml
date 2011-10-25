@@ -5,7 +5,7 @@
 	<!-- <groupId>jp.que.ti.y_s_util</groupId> -->
 	<artifactId>ysu_io</artifactId>
 	<packaging>jar</packaging>
-	<name>ysu_io -- utilitys of io</name>
+	<name>ysu_io -- utilities of io</name>
 	<!-- <version>0.0.1-SNAPSHOT</version> -->
 
 	<parent>
