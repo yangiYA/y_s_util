@@ -1,4 +1,4 @@
-package jp.que.ti.any
+package jp.que.ti.any.log
 import java.util.logging.Level
 
 trait Log[T] {

@@ -1,2 +1,6 @@
 */target
 */.cache
+*.sh~
+*.xml~
+*.gitignore~
+target

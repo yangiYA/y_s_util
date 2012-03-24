@@ -36,6 +36,8 @@ class FileUtilsTest extends JUnitSuite with ShouldMatchersForJUnit {
 
 	@Test def test_listFilesAndDirectorys {
 		val fl = new File("testdata");
+		val dirCc = new File(fl,"cc")
+		dirCc.mkdirs()
 		val result = FileUtils.listFilesAndDirectorys(fl)
 		assert(result.size === 9) // ***test***
 
