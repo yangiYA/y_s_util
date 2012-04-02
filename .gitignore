@@ -3,4 +3,5 @@
 *.sh~
 *.xml~
 *.gitignore~
+*.py~
 target

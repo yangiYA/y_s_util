@@ -131,10 +131,5 @@
 	</dependencies>
 
 	<repositories>
-		<repository>
-			<id>scala-tools.org</id>
-			<name>Scala-tools Maven2 Repository</name>
-			<url>http://yangiYa.github.com/mavenrep/</url>
-		</repository>
 	</repositories>
 </project>
