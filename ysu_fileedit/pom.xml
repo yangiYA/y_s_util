@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>jp.que.ti.y_s_util</groupId>
 		<artifactId>ysu</artifactId>
-		<version>0.0.2-SNAPSHOT</version>
+		<version>0.0.1</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
@@ -14,7 +14,7 @@
 	<artifactId>ysu_fileedit</artifactId>
 	<packaging>jar</packaging>
 	<name>ysu_fileedit -- utilities of excel poi wrapper</name>
-	<!-- <version>0.0.2-SNAPSHOT</version> -->
+	<!-- <version>0.0.1</version> -->
 
 	<build>
 		<finalName>ysu-fileedit</finalName>
