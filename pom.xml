@@ -14,6 +14,8 @@
 		<maven.compiler.source>1.6</maven.compiler.source>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<mavenrep4child>file://${basedir}/../../mavenrep</mavenrep4child>
 	</properties>
 
 	<modules>
@@ -38,7 +40,7 @@
 		<repository>
 			<id>jp.que.ti</id>
 			<name>yhj Repository</name>
-			<url>file:/_gitrep/mavenrep/</url>
+			<url>file://${basedir}/../mavenrep</url>
 		</repository>
 	</distributionManagement>
 
@@ -202,28 +204,28 @@
 
 	<dependencyManagement>
 		<dependencies>
-		<dependency>
-			<groupId>jp.que.ti.y_s_util</groupId>
-			<artifactId>ysu_any</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>jp.que.ti.y_s_util</groupId>
-			<artifactId>ysu_io</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>jp.que.ti.y_s_util</groupId>
-			<artifactId>ysu_xls</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>jp.que.ti.y_s_util</groupId>
-			<artifactId>ysu_gen</artifactId>
-			<version>${project.version}</version>
-		</dependency>
+			<dependency>
+				<groupId>jp.que.ti.y_s_util</groupId>
+				<artifactId>ysu_any</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>jp.que.ti.y_s_util</groupId>
+				<artifactId>ysu_io</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>jp.que.ti.y_s_util</groupId>
+				<artifactId>ysu_xls</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>jp.que.ti.y_s_util</groupId>
+				<artifactId>ysu_gen</artifactId>
+				<version>${project.version}</version>
+			</dependency>
 
-		<!-- http://search.maven.org/#browse%7C-2021159614 -->
+			<!-- http://search.maven.org/#browse%7C-2021159614 -->
 			<dependency>
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
@@ -310,13 +312,8 @@
 			<artifactId>specs_2.9.1</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<!-- 
-		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-classic</artifactId>
-			<scope>test</scope>
-		</dependency>
- -->
+		<!-- <dependency> <groupId>ch.qos.logback</groupId> <artifactId>logback-classic</artifactId> 
+			<scope>test</scope> </dependency> -->
 		<dependency>
 			<groupId>org.scala-lang</groupId>
 			<artifactId>scala-library</artifactId>

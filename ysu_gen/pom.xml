@@ -16,6 +16,14 @@
 	<name>ysu_gen -- utilities of generator</name>
 	<!-- <version>0.0.2-SNAPSHOT</version> -->
 
+	<distributionManagement>
+		<repository>
+			<id>jp.que.ti</id>
+			<name>yhj Repository</name>
+			<url>${mavenrep4child}</url>
+		</repository>
+	</distributionManagement>
+
 	<build>
 		<finalName>ytools</finalName>
 		<sourceDirectory>src/main/scala</sourceDirectory>

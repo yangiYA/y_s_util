@@ -16,11 +16,17 @@
 	<name>ysu_any -- utilities of Various functions.</name>
 	<!-- <version>0.0.2-SNAPSHOT</version> -->
 
+	<distributionManagement>
+		<repository>
+			<id>jp.que.ti</id>
+			<name>yhj Repository</name>
+			<url>${mavenrep4child}</url>
+		</repository>
+	</distributionManagement>
+
+
 	<build>
-	<!-- 
-		<sourceDirectory>src/main/scala</sourceDirectory>
-		<testSourceDirectory>src/test/scala</testSourceDirectory>
- -->
+		<!-- <sourceDirectory>src/main/scala</sourceDirectory> <testSourceDirectory>src/test/scala</testSourceDirectory> -->
 		<plugins>
 		</plugins>
 
