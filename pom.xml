@@ -4,7 +4,7 @@
 
 	<groupId>jp.que.ti.y_s_util</groupId>
 	<artifactId>ysu</artifactId>
-	<version>0.0.2</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<properties>
@@ -15,7 +15,9 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<mavenrep4parent>file://${basedir}/../mavenrep</mavenrep4parent>
 		<mavenrep4child>file://${basedir}/../../mavenrep</mavenrep4child>
+		<child.version>0.0.3-SNAPSHOT</child.version>
 	</properties>
 
 	<modules>
@@ -40,7 +42,7 @@
 		<repository>
 			<id>jp.que.ti</id>
 			<name>yhj Repository</name>
-			<url>file://${basedir}/../mavenrep</url>
+			<url>${mavenrep4parent}</url>
 		</repository>
 	</distributionManagement>
 
@@ -53,7 +55,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-assembly-plugin</artifactId>
-					<version>2.2-beta-5</version>
+					<version>2.3</version>
 				</plugin>
 
 
@@ -114,7 +116,7 @@
 				</executions>
 				<!-- -->
 				<configuration>
-					<scalaVersion>2.9.1</scalaVersion>
+					<scalaVersion>2.9.2</scalaVersion>
 					<jvmArgs>
 						<jvmArg>-Xms64m</jvmArg>
 						<jvmArg>-Xmx1024m</jvmArg>
@@ -207,22 +209,27 @@
 			<dependency>
 				<groupId>jp.que.ti.y_s_util</groupId>
 				<artifactId>ysu_any</artifactId>
-				<version>${project.version}</version>
+				<version>${child.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>jp.que.ti.y_s_util</groupId>
+				<artifactId>ysu_fileedit</artifactId>
+				<version>${child.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>jp.que.ti.y_s_util</groupId>
 				<artifactId>ysu_io</artifactId>
-				<version>${project.version}</version>
+				<version>${child.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>jp.que.ti.y_s_util</groupId>
 				<artifactId>ysu_xls</artifactId>
-				<version>${project.version}</version>
+				<version>${child.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>jp.que.ti.y_s_util</groupId>
 				<artifactId>ysu_gen</artifactId>
-				<version>${project.version}</version>
+				<version>${child.version}</version>
 			</dependency>
 
 			<!-- http://search.maven.org/#browse%7C-2021159614 -->
